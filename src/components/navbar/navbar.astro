@@ -1,0 +1,11 @@
+---
+import Container from "@components/container.astro";
+import logo from "assets/logo.svg";
+import { Image } from "astro:assets";
+---
+
+<Container>
+  <header class="my-5">
+    <Image src={logo} alt="A description of my image." class="mx-auto" />
+  </header>
+</Container>
