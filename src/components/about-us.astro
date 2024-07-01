@@ -1,0 +1,25 @@
+---
+import Container from "@components/container.astro";
+import HeadingTitle from "@components/ui/heading-title.astro";
+import imageAboutUs from "assets/about-us.jpg";
+import { Image } from "astro:assets";
+
+const description =
+  "AEAS provides English language assessment developed specifically for international primary and secondary students wishing to study in high school abroad. The AEAS test assesses English proficiency, mathematical reasoning and general ability skills and provides parents, students and agents with a comprehensive understanding of their current abilities and a recommendation for the year level of entry in an Australian classroom. The report also highlights any areas of English language they may need support with.";
+---
+
+<div class="bg-secondary py-7 md:py-10">
+  <Container>
+    <HeadingTitle title="About AEAS" class="text-primary" />
+    <div class="flex flex-col gap-5 pt-7 md:flex-row md:gap-7 lg:gap-14">
+      <div
+        class="border-b-2 border-dashed border-zinc-300 pb-5 text-justify text-white md:w-1/2 lg:w-3/5"
+      >
+        {description}
+      </div>
+      <div class="flex-1">
+        <Image src={imageAboutUs} alt="AEAS" class="rounded-2xl" />
+      </div>
+    </div>
+  </Container>
+</div>
