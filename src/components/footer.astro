@@ -1,20 +1,48 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="mt-1 text-center text-xs text-slate-500">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline"
-    >
-      Web3Templates
-    </a>
-  </p>
+---
+import Container from "@components/container.astro";
+import HeadingTitle from "@components/ui/heading-title.astro";
+import { Facebook, Instagram, Web } from "@components/ui/icons";
+import Linkedin from "@components/ui/icons/linkedin.astro";
+import imageFootline from "assets/footline.png";
+import { Image } from "astro:assets";
+
+const links = [
+  {
+    title: "AEAS Test | AEAS Cambodia",
+    icon: Facebook,
+    url: "https://www.aeas.com.au/",
+  },
+  {
+    title: "@aeas_test",
+    icon: Instagram,
+    url: "https://www.aeas.com.au/",
+  },
+  {
+    title: "AEAS",
+    icon: Linkedin,
+    url: "https://www.aeas.com.au/",
+  },
+  {
+    title: "aeas.com.au",
+    icon: Web,
+    url: "https://www.aeas.com.au/",
+  },
+];
+---
+
+<footer class="bg-secondary">
+  <Container class="pt-7 text-center text-white md:pt-10">
+    <HeadingTitle title="Connect With Us" />
+    <div class="flex flex-col justify-center gap-x-7 gap-y-5 pt-7 md:flex-row">
+      {
+        links.map((item) => (
+          <div class="flex items-center gap-3">
+            <item.icon class="mt-[-1.5px] h-7 w-7 text-white" />
+            <a href={item.url}>{item.title}</a>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+  <Image src={imageFootline} alt="AEAS" />
 </footer>
