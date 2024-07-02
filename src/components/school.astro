@@ -1,6 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import logoBeaconhill from "assets/schools/beaconhill.jpg";
 import logoCanberra from "assets/schools/canberra.jpg";
 import logoElite from "assets/schools/elite.jpg";
@@ -12,6 +13,8 @@ import logoScotch from "assets/schools/scotch.jpg";
 import logoStephen from "assets/schools/stephen.jpg";
 import logoWesley from "assets/schools/wesley.jpg";
 import { Image } from "astro:assets";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const schools = [
   {
@@ -59,11 +62,8 @@ const schools = [
 
 <div class="py-7 md:py-10">
   <Container>
-    <HeadingTitle
-      title="School Participants"
-      class="text-center text-primary"
-    />
-    <div class="flex flex-wrap justify-center pt-7">
+    <HeadingTitle title={t("school.title")} class="text-center text-primary" />
+    <div class="mt-5 flex flex-wrap justify-center">
       {
         schools.map((item) => (
           <div class="w-1/2 p-3 md:w-1/3 lg:w-1/5">
