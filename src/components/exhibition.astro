@@ -1,0 +1,89 @@
+---
+import imageSchedule from "@assets/backgrounds/bg_schedule.png";
+import imageSectionHead from "@assets/backgrounds/bg_section-head.png";
+import Container from "@components/container.astro";
+import HeadingTitle from "@components/ui/heading-title.astro";
+import { Date, Map, Time } from "@components/ui/icons";
+import Link from "@components/ui/link.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { Image } from "astro:assets";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+
+const schedules = [
+  {
+    title: t("exhibition.date"),
+    icon: Date,
+  },
+  {
+    title: t("exhibition.time"),
+    icon: Time,
+  },
+  {
+    title: t("exhibition.location"),
+    icon: Map,
+  },
+];
+---
+
+<div>
+  <Image src={imageSectionHead} alt="AEAS" class="mb-[-1px] w-full" />
+  <div class="bg-exhibition bg-cover bg-no-repeat">
+    <Container class="py-7 md:py-10 xl:py-20">
+      <div class="flex flex-col gap-7 lg:flex-row lg:gap-10">
+        <div class="text-center text-white lg:w-7/12 lg:text-start xl:w-3/5">
+          <div class="flex h-full flex-col justify-between">
+            <div>
+              <HeadingTitle title={t("exhibition.title")} />
+              <p
+                class="mt-5 text-body-dark"
+                set:html={t("exhibition.description")}
+              />
+            </div>
+            <div class="hidden lg:block">
+              <div class="mb-2 mt-7 grid grid-cols-2 gap-5 md:text-lg">
+                <Link href="#" style="warning">{t("button.register")}</Link>
+                <Link href="#" style="secondary">{t("button.brochure")}</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="relative mx-auto max-w-sm lg:mx-0 lg:!ml-auto">
+            <Image
+              src={imageSchedule}
+              alt="AEAS"
+              class="rounded-3xl shadow-[-10px_10px_10px_5px_rgba(128,19,31,.8)]"
+            />
+            <div class="absolute top-0 h-full w-full">
+              <div
+                class="flex h-[calc(100%-5px)] flex-col justify-between p-5 pt-14 sm:p-7 sm:pt-16"
+              >
+                {
+                  schedules.map((item) => (
+                    <div class="flex items-start gap-3 border-b-2 border-dashed border-zinc-300 pb-3 sm:gap-5 sm:pb-4">
+                      <div>
+                        <item.icon class="mt-[-1.5px] h-7 w-7 text-primary" />
+                      </div>
+                      <div class="text-body">{item.title}</div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block lg:hidden">
+          <div class="grid grid-cols-2 gap-2">
+            <Link href="#" style="warning" size="md"
+              >{t("button.register")}</Link
+            >
+            <Link href="#" style="secondary" size="md"
+              >{t("button.brochure")}</Link
+            >
+          </div>
+        </div>
+      </div>
+    </Container>
+  </div>
+</div>
