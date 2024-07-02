@@ -1,11 +1,15 @@
 ---
+import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import imageHeadlineSm from "assets/headline-sm.png";
 import imageHeadline from "assets/headline.png";
 import { Image } from "astro:assets";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<div class="py-3">
+<Container class="py-3">
   <Image
     src={imageHeadline}
     alt="The Australian School"
@@ -18,12 +22,8 @@ import { Image } from "astro:assets";
   />
   <div class="mt-5 text-center">
     <HeadingTitle
-      title="The Australian School"
-      class="!text-2xl text-primary md:!text-3xl lg:!text-4xl"
-    />
-    <HeadingTitle
-      title="Information day 2024"
-      class="!text-2xl text-secondary md:!text-3xl lg:!text-4xl"
+      title={t("headline.title")}
+      class="!text-2xl !font-black text-primary md:!text-3xl lg:!text-4xl"
     />
   </div>
-</div>
+</Container>

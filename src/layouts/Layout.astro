@@ -1,6 +1,7 @@
 ---
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
+import { getLangFromUrl } from "@i18n/utils";
 import { SEO } from "astro-seo";
 
 // import "@fontsource/hanuman/khmer.css";
@@ -17,6 +18,8 @@ const resolvedImageWithDomain = new URL(
   Astro.site,
 ).toString();
 
+const lang = getLangFromUrl(Astro.url);
+
 const { title } = Astro.props;
 
 const makeTitle = title
@@ -25,7 +28,7 @@ const makeTitle = title
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

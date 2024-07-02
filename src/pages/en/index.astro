@@ -3,6 +3,10 @@ import AboutUs from "@components/about-us.astro";
 import Headline from "@components/headline.astro";
 import School from "@components/school.astro";
 import Layout from "@layouts/Layout.astro";
+
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="">
