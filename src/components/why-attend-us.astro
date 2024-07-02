@@ -1,0 +1,28 @@
+---
+import imageSectionHead from "@assets/backgrounds/bg_section-head.png";
+import Container from "@components/container.astro";
+import HeadingTitle from "@components/ui/heading-title.astro";
+import Link from "@components/ui/link.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { Image } from "astro:assets";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<div>
+  <Image src={imageSectionHead} alt="AEAS" class="mb-[-1px] w-full" />
+  <div class="bg-why-attend-us bg-cover bg-no-repeat">
+    <Container class="pb-7 pt-52 text-center md:pb-10">
+      <HeadingTitle
+        title={t("whyAttend.title")}
+        class="mx-auto max-w-2xl text-white"
+      />
+      <p class="mt-5 text-body-dark" set:html={t("whyAttend.description")} />
+      <div class="mx-auto mt-10 w-52">
+        <Link href="#" style="warning" class="block">
+          {t("button.register")}
+        </Link>
+      </div>
+    </Container>
+  </div>
+</div>
