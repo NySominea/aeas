@@ -35,5 +35,8 @@ export const ui = {
     "button.register": "Register",
     "button.brochure": "Exhibition Brochure",
   },
-  en: {},
+  en: {
+    "headline.title":
+      "ពិព័រណ៍ការសិក្សាដ៏ធំបំផុតរបស់ប្រទេសអូស្ត្រាលីប្រចាំឆ្នាំ ២០២៤",
+  },
 } as const;

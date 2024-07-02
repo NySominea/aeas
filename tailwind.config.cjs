@@ -14,8 +14,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Hanuman", ...defaultTheme.fontFamily.sans],
-        koulen: ["Koulen", ...defaultTheme.fontFamily.sans],
+        montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        // koulen: ["koulen", ...defaultTheme.fontFamily.sans],
+        hanuman: ["Hanuman", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         exhibition: "url(/src/assets/backgrounds/bg_exhibition.png)",
