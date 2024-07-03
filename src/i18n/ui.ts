@@ -8,6 +8,9 @@ export const showDefaultLang = false;
 
 export const ui = {
   km: {
+    title: "The Australian Schools Information Day 2024",
+    description: "The largest Australian Early Study Abroad Fair in 2024",
+
     "headline.title":
       "The Australian School <br> <span class='text-secondary'>Information day 2024</span>",
 
@@ -51,6 +54,8 @@ export const ui = {
     "button.brochure": "Exhibition Brochure",
   },
   en: {
+    title: "The Australian Schools Information Day 2024",
+
     "headline.title":
       "ពិព័រណ៍ការសិក្សាដ៏ធំបំផុតរបស់ប្រទេសអូស្ត្រាលីប្រចាំឆ្នាំ ២០២៤",
 

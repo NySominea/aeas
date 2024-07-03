@@ -12,20 +12,14 @@
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.0.1",
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/hanuman": "^5.0.13",
-    "@fontsource/konkhmer-sleokchher": "^5.0.13",
     "@fontsource/koulen": "^5.0.22",
     "@fontsource/montserrat": "^5.0.18",
-    "@iconify-json/bx": "^1.1.10",
-    "@iconify-json/simple-icons": "^1.1.102",
-    "@iconify-json/uil": "^1.1.8",
     "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.8.7",
     "astro-icon": "^1.1.0",
-    "astro-navbar": "^2.3.2",
     "astro-seo": "^0.8.3",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.3"

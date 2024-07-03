@@ -11,19 +11,14 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 
 const links = [
   {
-    title: "AEAS Test | AEAS Cambodia",
-    icon: Facebook,
-    url: "https://www.aeas.com.au/",
-  },
-  {
     title: "@aeas_test",
     icon: Instagram,
-    url: "https://www.aeas.com.au/",
+    url: "https://www.instagram.com/aeas_test/",
   },
   {
     title: "AEAS",
     icon: Linkedin,
-    url: "https://www.aeas.com.au/",
+    url: "https://www.linkedin.com/company/aeas-test/",
   },
   {
     title: "aeas.com.au",
@@ -37,17 +32,37 @@ const links = [
   <Container class="text-center text-white">
     <HeadingTitle title={t("footer.title")} />
     <div class="flex flex-col justify-center gap-x-7 gap-y-5 pt-7 md:flex-row">
+      <div class="flex items-center gap-3">
+        <Facebook class="mt-[-1.5px] h-7 w-7 text-white" />
+        <a
+          href="https://www.facebook.com/AEASTest"
+          target="_BLANK"
+          class="cursor-pointer text-body-dark"
+        >
+          AEAS Test
+        </a>
+        |
+        <a
+          href="https://www.facebook.com/AEASPhnomPenh"
+          target="_BLANK"
+          class="cursor-pointer text-body-dark"
+        >
+          AEAS Cambodia
+        </a>
+      </div>
       {
         links.map((item) => (
-          <div class="flex items-center gap-3">
-            <item.icon class="mt-[-1.5px] h-7 w-7 text-white" />
-            <a href={item.url} class="text-body-dark">
-              {item.title}
+          <>
+            <a href={item.url} class="text-body-dark" target="_BLANK">
+              <div class="flex items-center gap-3">
+                <item.icon class="mt-[-1.5px] h-7 w-7 text-white" />
+                <div class="cursor-pointer">{item.title}</div>
+              </div>
             </a>
-          </div>
+          </>
         ))
       }
     </div>
   </Container>
-  <Image src={imageFootline} alt="AEAS" />
+  <Image src={imageFootline} alt="AEAS Australia" />
 </footer>

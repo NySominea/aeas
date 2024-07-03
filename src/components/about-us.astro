@@ -18,7 +18,11 @@ const t = useTranslations(getLangFromUrl(Astro.url));
         {t("aboutUs.description")}
       </div>
       <div class="flex-1">
-        <Image src={imageAboutUs} alt="AEAS" class="rounded-2xl" />
+        <Image
+          src={imageAboutUs}
+          alt={t("aboutUs.title")}
+          class="rounded-2xl"
+        />
       </div>
     </div>
   </Container>
