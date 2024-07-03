@@ -6,6 +6,7 @@ import { SEO } from "astro-seo";
 
 import "@fontsource/montserrat/cyrillic.css";
 import "@fontsource/hanuman/khmer.css";
+import Link from "@components/ui/link.astro";
 // import "@fontsource/koulen/khmer.css";
 
 export interface Props {
@@ -62,6 +63,15 @@ const makeTitle = title ? title + " | " + "AEAS" : t("title");
     <Navbar />
     <slot />
     <Footer />
+    <div class="fixed bottom-0 right-0 z-10 m-4">
+      <Link
+        href="https://australianschools.aeas.com.au/"
+        size="lg"
+        style="secondary"
+        class="bg-[#12264a] px-12 transition-colors duration-300 ease-in-out hover:bg-[#ef3a42]"
+        >{t("button.register")}
+      </Link>
+    </div>
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

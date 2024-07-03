@@ -19,7 +19,11 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       />
       <p class="mt-5 text-body-dark" set:html={t("whyAttend.description")} />
       <div class="mx-auto mt-10 w-52">
-        <Link href="#" style="warning" class="block">
+        <Link
+          href="https://australianschools.aeas.com.au/"
+          style="warning"
+          class="block"
+        >
           {t("button.register")}
         </Link>
       </div>
