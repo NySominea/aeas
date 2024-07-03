@@ -10,7 +10,7 @@ module.exports = {
         body: {
           DEFAULT: "#475569",
           light: "#475569",
-          dark: "#e4e4e7",
+          dark: "#f4f4f5",
         },
       },
       fontFamily: {

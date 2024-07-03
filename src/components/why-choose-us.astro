@@ -1,0 +1,140 @@
+---
+import Container from "@components/container.astro";
+import HeadingTitle from "@components/ui/heading-title.astro";
+import WhyChooseReason from "@components/ui/why-choose-reason.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import imageMsgMd from "assets/backgrounds/bg_msg-md.png";
+import imageMsgSm from "assets/backgrounds/bg_msg-sm.png";
+import imageMsg from "assets/backgrounds/bg_msg.png";
+import imageWhyChooseUs from "assets/why-choose-us.png";
+import { Image } from "astro:assets";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<div class="py-7 md:py-10">
+  <Container>
+    <HeadingTitle
+      title={t("whyChooseUs.title")}
+      class="text-center text-primary"
+    />
+    <p class="mt-3 text-center text-body">{t("whyChooseUs.description")}</p>
+  </Container>
+  <Container>
+    <div class="hidden lg:block">
+      <div class="mt-10 flex flex-wrap items-center">
+        <div class="w-[37.5%] xl:w-[35%]">
+          <div
+            class="-mr-7 flex flex-1 flex-col justify-between gap-10 xl:gap-20"
+          >
+            <WhyChooseReason
+              title={t("whyChooseUs.reason.quality")}
+              color="primary"
+              position="left"
+            />
+            <WhyChooseReason
+              title={t("whyChooseUs.reason.environment")}
+              color="secondary"
+              position="left"
+            />
+          </div>
+        </div>
+        <div class="flex-1">
+          <Image src={imageWhyChooseUs} alt={t("whyChooseUs.title")} />
+        </div>
+        <div class="w-[37.5%] xl:w-[35%]">
+          <div
+            class="-ml-7 flex flex-1 flex-col justify-between gap-10 xl:gap-20"
+          >
+            <WhyChooseReason
+              title={t("whyChooseUs.reason.approach")}
+              color="primary"
+              position="right"
+            />
+            <WhyChooseReason
+              title={t("whyChooseUs.reason.program")}
+              color="secondary"
+              position="right"
+            />
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="mx-auto w-[calc(37.5%-60px)] xl:w-[calc(35%-60px)]">
+            <WhyChooseReason
+              title={t("whyChooseUs.reason.school")}
+              color="primary"
+              position="bottom"
+              class="pt-7"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+  <div class="block lg:hidden">
+    <div class="mt-7 flex flex-col gap-3 md:mt-10 md:flex-row">
+      <Container class="flex flex-1 flex-col gap-3">
+        <WhyChooseReason
+          title={t("whyChooseUs.reason.quality")}
+          color="primary"
+          position="left"
+          connector={false}
+        />
+        <WhyChooseReason
+          title={t("whyChooseUs.reason.environment")}
+          color="secondary"
+          position="left"
+          connector={false}
+        />
+        <WhyChooseReason
+          title={t("whyChooseUs.reason.approach")}
+          color="primary"
+          connector={false}
+        />
+        <WhyChooseReason
+          title={t("whyChooseUs.reason.program")}
+          color="secondary"
+          connector={false}
+        />
+        <WhyChooseReason
+          title={t("whyChooseUs.reason.school")}
+          color="primary"
+          connector={false}
+        />
+      </Container>
+      <div class="overflow-hidden md:w-1/3">
+        <Image
+          src={imageWhyChooseUs}
+          alt={t("whyChooseUs.title")}
+          class="mx-auto h-full max-w-xs object-cover object-left"
+        />
+      </div>
+    </div>
+  </div>
+  <Container>
+    <div
+      class="relative mx-auto -mb-44 mt-10 max-w-sm md:max-w-lg lg:max-w-3xl"
+    >
+      <Image
+        src={imageMsg}
+        alt="The Australian School"
+        class="hidden lg:block"
+      />
+      <Image
+        src={imageMsgMd}
+        alt="The Australian School"
+        class="hidden md:block lg:hidden"
+      />
+      <Image
+        src={imageMsgSm}
+        alt="The Australian School"
+        class="block md:hidden"
+      />
+      <p
+        class="absolute top-0 mt-3 flex h-full w-full items-center justify-center p-7 text-center text-sm text-body-dark md:text-base"
+      >
+        {t("whyChooseUs.message")}
+      </p>
+    </div>
+  </Container>
+</div>

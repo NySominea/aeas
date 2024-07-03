@@ -19,6 +19,21 @@ export const ui = {
     "exhibition.time": "1:00pm - 5:00pm",
     "exhibition.location": "Hyatt Regency Hotel, Phnom Penh",
 
+    "whyChooseUs.title": "Why Choose an Australian School?",
+    "whyChooseUs.description":
+      "Australia Offers a great environment for children to go to school",
+    "whyChooseUs.message":
+      "By living and learning in a multicultural society, students develop a global perspective, which is critical for success in their careers in an interconnected world. Australian schools are affordable with a range of tuition fees, and studying in an Australian school, then university, can lead to a wide variety of future career paths.",
+    "whyChooseUs.reason.quality": "A quality education",
+    "whyChooseUs.reason.environment":
+      "An environment to grow among teachers, fellow students, and surrounding community.",
+    "whyChooseUs.reason.approach":
+      "A holistic approach to education in all aspects of daily and academic life.",
+    "whyChooseUs.reason.program":
+      "Schools with different programs and fee levels.",
+    "whyChooseUs.reason.school":
+      "With over 400 quality Australian schools available with different programs and affordable fee levels.",
+
     "whyAttend.title":
       "Why should you attend the Australian School Information Day?",
     "whyAttend.description":
@@ -38,5 +53,20 @@ export const ui = {
   en: {
     "headline.title":
       "ពិព័រណ៍ការសិក្សាដ៏ធំបំផុតរបស់ប្រទេសអូស្ត្រាលីប្រចាំឆ្នាំ ២០២៤",
+
+    "whyChooseUs.title": "Why Choose an Australian School?",
+    "whyChooseUs.description":
+      "Australia Offers a great environment for children to go to school",
+    "whyChooseUs.message":
+      "By living and learning in a multicultural society, students develop a global perspective, which is critical for success in their careers in an interconnected world. Australian schools are affordable with a range of tuition fees, and studying in an Australian school, then university, can lead to a wide variety of future career paths.",
+    "whyChooseUs.reason.quality": "ការអប់រំប្រកបដោយគុណភាព",
+    "whyChooseUs.reason.environment":
+      "បរិយាកាសដើម្បីរីកចម្រើនសម្រាប់គ្រូ សិស្ស និងសហគមន៍ជុំវិញ",
+    "whyChooseUs.reason.approach":
+      "វិធីសាស្រ្តរួមចំពោះការអប់រំក្នុងគ្រប់ទិដ្ឋភាពនៃជីវិតប្រចាំថ្ងៃ និងការសិក្សា",
+    "whyChooseUs.reason.program":
+      "សាលារៀនដែលមានកម្មវិធី និងកម្រិតថ្លៃសិក្សាខុសៗគ្នា",
+    "whyChooseUs.reason.school":
+      "ជាមួយនឹងសាលារៀនដែលមានគុណភាពជាង ៤០០ សាលា កម្មវិធីសិក្សាផ្សេងៗគ្នា និងកម្រិតថ្លៃសិក្សាសមរម្យ ",
   },
 } as const;
