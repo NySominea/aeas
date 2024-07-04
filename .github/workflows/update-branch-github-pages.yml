@@ -24,9 +24,7 @@ jobs:
 
       - name: Pull changes from main to github-pages
         run: |
-          git checkout main
           git fetch origin
           git checkout github-pages
-          git pull
           git merge main
           git push origin github-pages
