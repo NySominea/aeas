@@ -19,8 +19,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'nysominea'
+          git config --global user.email 'sominea.ny77@gmail.com'
 
       - name: Pull changes from main to github-pages
         run: |
