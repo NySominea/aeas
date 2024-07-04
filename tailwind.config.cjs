@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        // koulen: ["koulen", ...defaultTheme.fontFamily.sans],
+        koulen: ["Koulen", ...defaultTheme.fontFamily.sans],
         hanuman: ["Hanuman", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
