@@ -22,7 +22,7 @@ jobs:
         run: |
           git fetch origin
           git checkout github-pages
-          git pull origin main
+          git merge origin main
           git push origin github-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
