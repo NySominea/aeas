@@ -3,11 +3,11 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { SEO } from "astro-seo";
+import Link from "@components/ui/link.astro";
 
 import "@fontsource/montserrat/cyrillic.css";
 import "@fontsource/hanuman/khmer.css";
-import Link from "@components/ui/link.astro";
-// import "@fontsource/koulen/khmer.css";
+import "@fontsource/koulen/khmer.css";
 
 export interface Props {
   title: string;

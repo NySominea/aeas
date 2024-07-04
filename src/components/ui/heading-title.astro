@@ -1,15 +1,25 @@
 ---
+import { getLangFromUrl } from "@i18n/utils";
+
 export interface Props {
   title: string;
   class?: string;
+  style?: "primary" | "secondary";
 }
 
-const { title, class: className } = Astro.props;
+const { title, style = "secondary", class: className } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const styles = {
+  primary:
+    "text-3xl font-black md:text-3xl lg:text-4xl uppercase leading-tight",
+  secondary: "text-2xl font-extrabold uppercase leading-tight lg:text-3xl",
+};
 ---
 
 <h2
   class:list={[
-    "text-2xl font-bold uppercase leading-tight lg:text-3xl",
+    { "font-koulen !leading-snug": lang === "km" },
+    styles[style],
     className,
   ]}
   set:html={title}
