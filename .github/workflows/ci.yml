@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Configure Git
         run: |
@@ -22,7 +22,7 @@ jobs:
         run: |
           git fetch origin
           git checkout github-pages
-          git pull origin main
+          git merge main
           git push origin github-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
