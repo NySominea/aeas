@@ -29,4 +29,5 @@ jobs:
           git checkout github-pages
           git pull
           git merge main
+          git commit -m "Merge branch 'main' into github-pages"
           git push origin github-pages
