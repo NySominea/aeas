@@ -2,28 +2,20 @@
 import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
-import imageHeadlineSm from "assets/headline-sm.png";
-import imageHeadline from "assets/headline.png";
+import imageCoverSm from "assets/cover-sm.png";
+import imageCover from "assets/cover.png";
 import { Image } from "astro:assets";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <Container class="py-3">
-  <Image
-    src={imageHeadline}
-    alt={t("headline.title")}
-    class="hidden md:block"
-  />
-  <Image
-    src={imageHeadlineSm}
-    alt={t("headline.title")}
-    class="block md:hidden"
-  />
+  <Image src={imageCover} alt={t("headline.title")} class="hidden md:block" />
+  <Image src={imageCoverSm} alt={t("headline.title")} class="block md:hidden" />
   <div class="mt-5 text-center">
     <HeadingTitle
       title={t("headline.title")}
-      class="!text-2xl !font-black text-primary md:!text-3xl lg:!text-4xl"
+      class="!text-3xl !font-black text-primary md:!text-3xl lg:!text-4xl"
     />
   </div>
 </Container>
