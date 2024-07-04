@@ -1,4 +1,4 @@
-name: Pull from main to github-branches
+name: Update branch github-pages
 
 on:
   push:
