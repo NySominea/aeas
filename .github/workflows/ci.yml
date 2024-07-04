@@ -1,0 +1,28 @@
+name: Pull from main to gh-branches
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pull-main-to-github-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Pull changes from main to github-pages
+        run: |
+          git fetch origin
+          git checkout github-pages
+          git pull origin main
+          git push origin github-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
