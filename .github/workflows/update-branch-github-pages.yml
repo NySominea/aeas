@@ -1,0 +1,32 @@
+name: Pull from main to github-branches
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  pull-main-to-github-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Pull changes from main to github-pages
+        run: |
+          git checkout main
+          git fetch origin
+          git checkout github-pages
+          git pull
+          git merge main
+          git push origin github-pages
