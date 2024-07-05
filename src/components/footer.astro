@@ -1,57 +1,20 @@
 ---
 import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
-import { Facebook, Instagram, Web } from "@components/ui/icons";
-import Linkedin from "@components/ui/icons/linkedin.astro";
+import { FOOTER_LINKS } from "@constants/app";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import imageFootline from "assets/footline.png";
 import { Image } from "astro:assets";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
-
-const links = [
-  {
-    title: "@aeas_test",
-    icon: Instagram,
-    url: "https://www.instagram.com/aeas_test/",
-  },
-  {
-    title: "AEAS",
-    icon: Linkedin,
-    url: "https://www.linkedin.com/company/aeas-test/",
-  },
-  {
-    title: "aeas.com.au",
-    icon: Web,
-    url: "https://www.aeas.com.au/",
-  },
-];
 ---
 
 <footer class="bg-secondary pt-7 md:pt-10">
   <Container class="text-center text-white">
     <HeadingTitle title={t("footer.title")} />
     <div class="flex flex-col justify-center gap-x-7 gap-y-5 pt-7 md:flex-row">
-      <div class="flex items-center gap-3">
-        <Facebook class="mt-[-1.5px] h-7 w-7 text-white" />
-        <a
-          href="https://www.facebook.com/AEASTest"
-          target="_BLANK"
-          class="cursor-pointer text-body-dark"
-        >
-          AEAS Test
-        </a>
-        |
-        <a
-          href="https://www.facebook.com/AEASCambodia"
-          target="_BLANK"
-          class="cursor-pointer text-body-dark"
-        >
-          AEAS Cambodia
-        </a>
-      </div>
       {
-        links.map((item) => (
+        FOOTER_LINKS.map((item) => (
           <>
             <a href={item.url} class="text-body-dark" target="_BLANK">
               <div class="flex items-center gap-3">

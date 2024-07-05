@@ -20,7 +20,7 @@ export const ui = {
       "We invite you to a meeting with prestigious Australian private schools! <br><br> Meet in person with admission officials from prestigious Australian schools in Cambodia",
     "exhibition.date": "Sunday 8th September 2024",
     "exhibition.time": "1:00pm - 5:00pm",
-    "exhibition.location": "Hyatt Regency Hotel, Phnom Penh",
+    "exhibition.location": "Hyatt Regency Phnom Penh",
 
     "whyChooseUs.title": "Why Choose an Australian School?",
     "whyChooseUs.description":
