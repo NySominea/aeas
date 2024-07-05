@@ -1,0 +1,31 @@
+---
+import { languages } from "@i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "@i18n/utils";
+import { Image } from "astro:assets";
+import en from "assets/locales/en.png";
+import km from "assets/locales/km.png";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const locales = Object.entries(languages).filter(([_lang]) => _lang !== lang);
+const images = {
+  en: en,
+  km: km,
+};
+---
+
+<div class:list={["flex justify-end gap-3", className]}>
+  {
+    locales.map(([lang, label]) => (
+      <a href={translatePath("/", lang)} class="inline-block">
+        <Image src={images[lang]} alt={label} width={32} />
+      </a>
+    ))
+  }
+</div>
