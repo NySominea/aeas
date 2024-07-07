@@ -3,27 +3,13 @@ import imageSchedule from "@assets/backgrounds/bg_schedule.png";
 import imageSectionHead from "@assets/backgrounds/bg_section-head.png";
 import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
-import { Date, Map, Time } from "@components/ui/icons";
 import Link from "@components/ui/link.astro";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { BROCHURE_LINK, EXHIBITION_DAY } from "@constants/app";
+import { REGISTER_LINK } from "@constants/app";
 import { Image } from "astro:assets";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
-
-const schedules = [
-  {
-    title: t("exhibition.date"),
-    icon: Date,
-  },
-  {
-    title: t("exhibition.time"),
-    icon: Time,
-  },
-  {
-    title: t("exhibition.location"),
-    icon: Map,
-  },
-];
 ---
 
 <div>
@@ -44,15 +30,30 @@ const schedules = [
               <div class="mb-2 mt-7 grid grid-cols-2 gap-5 md:text-lg">
                 <Link
                   href="https://australianschools.aeas.com.au/"
-                  style="warning">{t("button.register")}</Link
+                  target="_BLANK"
+                  style="warning"
                 >
-                <Link href="#" style="secondary">{t("button.brochure")}</Link>
+                  {t("button.register")}
+                </Link>
+                {
+                  BROCHURE_LINK && (
+                    <Link
+                      href={BROCHURE_LINK}
+                      target="_BLANK"
+                      style="secondary"
+                    >
+                      {t("button.brochure")}
+                    </Link>
+                  )
+                }
               </div>
             </div>
           </div>
         </div>
         <div class="flex-1">
-          <div class="relative mx-auto max-w-sm lg:mx-0 lg:!ml-auto">
+          <div
+            class="relative mx-auto max-w-sm rounded-3xl bg-white lg:mx-0 lg:!ml-auto"
+          >
             <Image
               src={imageSchedule}
               alt="AEAS Exhibition Date"
@@ -63,13 +64,13 @@ const schedules = [
                 class="flex h-[calc(100%-5px)] flex-col justify-between p-5 pt-14 sm:p-7 sm:pt-16"
               >
                 {
-                  schedules.map((item) => (
+                  Object.values(EXHIBITION_DAY).map((item) => (
                     <div class="flex items-start gap-3 border-b-2 border-dashed border-zinc-300 pb-3 sm:gap-5 sm:pb-4">
                       <div>
                         <item.icon class="mt-[-1.5px] h-7 w-7 text-primary" />
                       </div>
                       <div class="text-base text-body md:text-lg">
-                        {item.title}
+                        {t(item.title as any)}
                       </div>
                     </div>
                   ))
@@ -78,16 +79,33 @@ const schedules = [
             </div>
           </div>
         </div>
-        <div class="block lg:hidden">
-          <div class="grid grid-cols-2 gap-2">
+        <div class="mt-3 block lg:hidden">
+          <div
+            class:list={[
+              "grid gap-4",
+              BROCHURE_LINK ? "grid-cols-1 sm:grid-cols-2" : "mx-auto max-w-sm",
+            ]}
+          >
             <Link
-              href="https://australianschools.aeas.com.au/"
+              href={REGISTER_LINK}
+              target="_BLANK"
               style="warning"
-              size="md">{t("button.register")}</Link
+              size="md"
             >
-            <Link href="#" style="secondary" size="md"
-              >{t("button.brochure")}</Link
-            >
+              {t("button.register")}
+            </Link>
+            {
+              BROCHURE_LINK && (
+                <Link
+                  href={BROCHURE_LINK}
+                  target="_BLANK"
+                  style="secondary"
+                  size="md"
+                >
+                  {t("button.brochure")}
+                </Link>
+              )
+            }
           </div>
         </div>
       </div>
