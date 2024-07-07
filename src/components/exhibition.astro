@@ -28,11 +28,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
             </div>
             <div class="hidden lg:block">
               <div class="mb-2 mt-7 grid grid-cols-2 gap-5 md:text-lg">
-                <Link
-                  href="https://australianschools.aeas.com.au/"
-                  target="_BLANK"
-                  style="warning"
-                >
+                <Link href={REGISTER_LINK} target="_BLANK" style="warning">
                   {t("button.register")}
                 </Link>
                 {

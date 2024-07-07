@@ -3,6 +3,7 @@ import imageSectionHead from "@assets/backgrounds/bg_section-head.png";
 import Container from "@components/container.astro";
 import HeadingTitle from "@components/ui/heading-title.astro";
 import Link from "@components/ui/link.astro";
+import { REGISTER_LINK } from "@constants/app";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { Image } from "astro:assets";
 
@@ -20,7 +21,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       <p class="mt-5 text-body-dark" set:html={t("whyAttend.description")} />
       <div class="mx-auto mt-10 w-52">
         <Link
-          href="https://australianschools.aeas.com.au/"
+          href={REGISTER_LINK}
           target="_BLANK"
           style="warning"
           class="block"
