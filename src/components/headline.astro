@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<Container class="py-3">
+<Container class="py-3 pt-5">
   <Image src={imageCover} alt={t("headline.title")} class="hidden md:block" />
   <Image src={imageCoverSm} alt={t("headline.title")} class="block md:hidden" />
   <div class="mt-5 text-center">
