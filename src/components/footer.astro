@@ -15,16 +15,16 @@ const t = useTranslations(getLangFromUrl(Astro.url));
   <Container class="text-center text-white">
     <HeadingTitle title={t("footer.title")} />
     <div
-      class="flex flex-col items-center justify-center gap-7 py-10 md:flex-row md:gap-10"
+      class="flex flex-col items-center justify-center gap-8 py-10 md:flex-row"
     >
       <div>
-        <Image src={imageLogoReverse} alt="AEAS" class="h-8 w-auto" />
+        <Image src={imageLogoReverse} alt="AEAS" class="h-8 w-auto md:h-10" />
       </div>
       <div>
         <Image
           src={image40Years}
           alt="40 years of quality international student assessments"
-          class="h-10 w-auto"
+          class="h-10 w-auto md:h-12"
         />
       </div>
     </div>
