@@ -8,7 +8,7 @@ export const showDefaultLang = false;
 
 export const ui = {
   en: {
-    title: "The Australian Schools Information Day 2025",
+    title: "The Australian Schools Information Day 2024",
     description: "The largest Australian Early Study Abroad Fair in 2024",
 
     "headline.title":
