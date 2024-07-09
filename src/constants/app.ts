@@ -46,52 +46,52 @@ export const SCHOOLS = [
   {
     name: "Beaconhills Colledge",
     logo: logoBeaconhill,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/beaconhills-college-vic_kh-sept24/",
   },
   {
     name: "Canberra Grammar School",
     logo: logoCanberra,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/canberra-grammar-act_kh-sept24/",
   },
   {
     name: "Elite College",
     logo: logoElite,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/elite-college-of-english-nsw_kh-sept24/",
   },
   {
     name: "Melbourne Girls Grammar",
     logo: logoMelbourne,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/melbourne-girls-grammar-vic_kh-sept24/",
   },
   {
     name: "Moreton Bay",
     logo: logoMoreton,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/moreton-bay-colleges-qld_kh-sept24/",
   },
   {
     name: "PLC",
     logo: logoPlc,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/plc-sydney-nsw_kh-sept24/",
   },
   {
     name: "Scotch College",
     logo: logoScotch,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/scotch-college-melbourne-vic_kh-sept24/",
   },
   {
     name: "St Stephen's School",
     logo: logoStephen,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/st-stephens-school-wa_kh-sept24/",
   },
   {
     name: "The Knox School",
     logo: logoKnox,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/the-knox-school-vic_kh-sept24/",
   },
   {
     name: "Wesley Collede",
     logo: logoWesley,
-    url: "#",
+    url: "https://exhibitions.aeas.com.au/wesley-college-melbourne-vic_kh-sept24",
   },
 ];
 
