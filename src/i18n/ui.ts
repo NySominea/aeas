@@ -53,6 +53,8 @@ export const ui = {
       "AEAS has also organised Australian Schools exhibitions in countries around the world for over 30 years. In this time, we’ve helped thousands of families and students connect with top quality Australian schools, and AEAS events have often been the launchpad for successful study abroad pathways. AEAS is the expert on all things early study abroad!",
 
     "partner.title": "AEAS Official Partners",
+    "partner.description":
+      "AEAS Official Partner Agents are high quality education agents with extensive experience supporting school students and their families to enroll in high quality Australian schools. Our partner agents will be available to meet with families at the Exhibition.",
 
     "footer.title": "Connect with Us",
 
@@ -107,6 +109,8 @@ export const ui = {
       "AEAS ក៏​បាន​រៀបចំ​ការ​តាំង​ពិព័រណ៍​សាលា​អូស្ត្រាលី​ក្នុង​ប្រទេស​ជុំវិញ​ពិភពលោក​អស់​រយៈពេល​ជាង ៣០ឆ្នាំ​មក​ហើយ។ នៅពេលនេះ យើងបានជួយគ្រួសារ និងសិស្សរាប់ពាន់នាក់ឱ្យភ្ជាប់ទំនាក់ទំនងជាមួយសាលាអូស្ត្រាលីដែលមានគុណភាពខ្ពស់ ហើយព្រឹត្តិការណ៍ AEAS តែងតែជាកម្មវិធីចាប់ផ្តើមសម្រាប់ផ្លូវជោគជ័យក្នុងការសិក្សានៅបរទេស។ AEAS គឺជាអ្នកឯកទេសប្រឹក្សាការសិក្សានៅបរទេស!",
 
     "partner.title": "ដៃគូផ្លូវការរបស់ AEAS",
+    "partner.description":
+      "ភ្នាក់ងារដៃគូផ្លូវការរបស់ AEAS គឺជាភ្នាក់ងារអប់រំដែលមានគុណភាពខ្ពស់ជាមួយនឹងបទពិសោធន៍ជាច្រើនឆ្នាំក្នុងការជួយដល់សិស្សានុសិស្ស និងអាណាព្យាបាលរបស់ពួកគេឲ្យចុះឈ្មោះចូលរៀននៅសាលាអូស្ត្រាលីដែលមានគុណភាពខ្ពស់។ ភ្នាក់ងារ​ដៃគូ​របស់​យើង​នឹងរង់ចាំ​​ជួបប្រឹក្សា​ជាមួយ​អាណាព្យាបាល​នៅថ្ងៃ​ពិព័រណ៍ខាងមុខនេះ។",
 
     "footer.title": "ភ្ជាប់ទំនាក់ទំនងជាមួយយើង",
 
