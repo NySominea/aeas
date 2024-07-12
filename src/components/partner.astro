@@ -1,0 +1,118 @@
+---
+import Container from "@components/container.astro";
+import { PARTNERS } from "@constants/app";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { Image } from "astro:assets";
+import { Email, Map, Phone, Web } from "@components/ui/icons";
+import logoPartner from "assets/logo-partner.jpeg";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<div class="py-7 md:py-10">
+  <Container>
+    <Image
+      src={logoPartner}
+      alt={t("partner.title")}
+      class="mx-auto max-w-64 md:max-w-xs"
+    />
+    <div
+      class="mt-7 flex flex-col justify-center gap-7 md:flex-row lg:gap-10 xl:gap-16"
+    >
+      {
+        PARTNERS.map((item, index) => (
+          <>
+            <div
+              class:list={[
+                "w-full max-w-md rounded-3xl border-2 border-dashed border-[#f2f2f2] p-5 text-body md:w-1/2 lg:p-7",
+              ]}
+            >
+              <div class="flex h-auto items-end md:h-20 lg:h-24">
+                <a href={item.url} target="_BLANK">
+                  <Image src={item.logo} alt={item.name} class="mx-auto" />
+                </a>
+              </div>
+              <div class="flex items-start gap-2 py-2 lg:gap-3">
+                <div>
+                  <Map
+                    class:list={[
+                      "mt-[-2.5px] h-7 w-7",
+                      index === 0 ? "text-primary" : "text-secondary",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <a href={item.mapUrl} target="_BLANK">
+                    {item.address}
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start gap-2 py-3 lg:gap-3">
+                <div>
+                  <Phone
+                    class:list={[
+                      "mt-[-2.5px] h-7 w-7",
+                      index === 0 ? "text-primary" : "text-secondary",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <a href={`tel:${item.phone}`} target="_BLANK">
+                    {item.phone}
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start gap-2 py-2 lg:gap-3">
+                <div>
+                  <Email
+                    class:list={[
+                      "mt-[-2.5px] h-7 w-7",
+                      index === 0 ? "text-primary" : "text-secondary",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <a href={`mailto:${item.email}`} target="_BLANK">
+                    {item.email}
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start gap-2 py-2 lg:gap-3">
+                <div>
+                  <Web
+                    class:list={[
+                      "mt-[-2.5px] h-7 w-7",
+                      index === 0 ? "text-primary" : "text-secondary",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <a href={item.url} target="_BLANK">
+                    {item.website}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </>
+        ))
+      }
+    </div>
+    <!-- <div class="mt-5 flex flex-wrap justify-center">
+      {
+        SCHOOLS.map((item) => (
+          <div class="w-1/2 p-3 md:w-1/3 lg:w-1/5">
+            <a href={item.url} target="_BLANK">
+              <Image
+                src={item.logo}
+                alt={item.name}
+                width={130}
+                height={130}
+                class="mx-auto"
+              />
+            </a>
+          </div>
+        ))
+      }
+    </div> -->
+  </Container>
+</div>

@@ -6,3 +6,5 @@ export { default as Map } from "./map.astro";
 export { default as Tick } from "./tick.astro";
 export { default as Time } from "./time.astro";
 export { default as Web } from "./web.astro";
+export { default as Phone } from "./phone.astro";
+export { default as Email } from "./email.astro";

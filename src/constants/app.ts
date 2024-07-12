@@ -17,6 +17,8 @@ import logoPlc from "assets/schools/plc.jpg";
 import logoScotch from "assets/schools/scotch.jpg";
 import logoStephen from "assets/schools/stephen.jpg";
 import logoWesley from "assets/schools/wesley.jpg";
+import logoSpringBoard from "assets/partners/springboard.jpeg";
+import logoWeduAbroad from "assets/partners/weduabroad.jpeg";
 
 export const APP_NAME = "Australian Education Assessment Services";
 
@@ -92,6 +94,31 @@ export const SCHOOLS = [
     name: "Wesley Collede",
     logo: logoWesley,
     url: "https://exhibitions.aeas.com.au/wesley-college-melbourne-vic_kh-sept24",
+  },
+];
+
+export const PARTNERS = [
+  {
+    logo: logoSpringBoard,
+    name: "SpringBoard4Education",
+    address:
+      "SpringBoard House N.6, Street 574, Boeung Kak II, Toul Kork, Phnom Penh, Cambodia",
+    mapUrl: "https://maps.app.goo.gl/spaaLvAXEBM2Ybfy6",
+    phone: "+855 15 961 861",
+    email: "info@springboard4education.com",
+    website: "www.springboard4education.com",
+    url: "https://www.springboard4education.com/",
+  },
+  {
+    logo: logoWeduAbroad,
+    name: "WEduAbroad",
+    address:
+      "38th Floor, Unit G38 (via Sky Lobby), Garden In the Air (GIA) Tower, Sopheak Mongkol Street, Diamond Island, Sangkat Tonle Bassac, Khan Chamkarmorn, Phnom Penh, Cambodia",
+    mapUrl: "https://maps.app.goo.gl/aa8Q5bFRcxe8cSoP9",
+    phone: "+855 17 548 354",
+    email: "info@weduabroad.com",
+    website: "www.weduabroad.com",
+    url: "http://weduabroad.com/",
   },
 ];
 

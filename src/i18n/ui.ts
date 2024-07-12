@@ -3,7 +3,7 @@ export const languages = {
   en: "English",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "km";
 export const showDefaultLang = false;
 
 export const ui = {
@@ -51,6 +51,8 @@ export const ui = {
     "aboutUs.description":
       "AEAS provides English language assessment developed specifically for international primary and secondary students wishing to study in high school abroad. The AEAS test assesses English proficiency, mathematical reasoning and general ability skills and provides parents, students and agents with a comprehensive understanding of their current abilities and a recommendation for the year level of entry in an Australian classroom. The report also highlights any areas of English language they may need support with.<br><br>" +
       "AEAS has also organised Australian Schools exhibitions in countries around the world for over 30 years. In this time, we’ve helped thousands of families and students connect with top quality Australian schools, and AEAS events have often been the launchpad for successful study abroad pathways. AEAS is the expert on all things early study abroad!",
+
+    "partner.title": "AEAS Official Partners",
 
     "footer.title": "Connect with Us",
 
@@ -103,6 +105,8 @@ export const ui = {
     "aboutUs.description":
       "AEAS ផ្តល់ការធ្វើតេស្តភាសាអង់គ្លេសដែលត្រូវបានបង្កើតឡើងជាពិសេសសម្រាប់សិស្សកម្រិតបឋមសិក្សា និងមធ្យមសិក្សា ដែលមានបំណងទៅសិក្សានៅវិទ្យាល័យនៅប្រទេសអូស្ត្រាលី។ ការធ្វើតេស្ត AEAS វាយតម្លៃជំនាញភាសាអង់គ្លេស សមត្ថភាពហេតុផលគណិតវិទ្យា និងជំនាញសមត្ថភាពទូទៅ ហើយផ្តល់ឱ្យឪពុកម្តាយ សិស្ស និងភ្នាក់ងារនាៗ នូវការយល់ដឹងដ៏ទូលំទូលាយអំពីសមត្ថភាព របស់ពួកគេ ក៏ដូចជាការណែនាំសម្រាប់កម្រិតឆ្នាំ/ថ្នាក់នៃការចូលរៀនតាមស្តង់ដារនៅប្រទេសអូស្ត្រាលី។ លទ្ធផលតេស្តក៏បានគូសបញ្ជាក់ពីផ្នែកណាមួយនៃភាសាអង់គ្លេសដែលពួកគេអាចត្រូវការការពង្រឹងបន្ថែមផងដែរ។<br><br>" +
       "AEAS ក៏​បាន​រៀបចំ​ការ​តាំង​ពិព័រណ៍​សាលា​អូស្ត្រាលី​ក្នុង​ប្រទេស​ជុំវិញ​ពិភពលោក​អស់​រយៈពេល​ជាង ៣០ឆ្នាំ​មក​ហើយ។ នៅពេលនេះ យើងបានជួយគ្រួសារ និងសិស្សរាប់ពាន់នាក់ឱ្យភ្ជាប់ទំនាក់ទំនងជាមួយសាលាអូស្ត្រាលីដែលមានគុណភាពខ្ពស់ ហើយព្រឹត្តិការណ៍ AEAS តែងតែជាកម្មវិធីចាប់ផ្តើមសម្រាប់ផ្លូវជោគជ័យក្នុងការសិក្សានៅបរទេស។ AEAS គឺជាអ្នកឯកទេសប្រឹក្សាការសិក្សានៅបរទេស!",
+
+    "partner.title": "ដៃគូផ្លូវការរបស់ AEAS",
 
     "footer.title": "ភ្ជាប់ទំនាក់ទំនងជាមួយយើង",
 

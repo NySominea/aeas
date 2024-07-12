@@ -11,7 +11,7 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "en",
+        defaultLocale: "km",
         locales: {
           km: "km-KH",
           en: "en-US",
