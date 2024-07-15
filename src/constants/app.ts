@@ -27,7 +27,7 @@ export const APP_SHORT_NAME = "AEAS";
 export const REGISTER_LINK =
   "https://events.aeas.com.au/mod/UserPortal/EventRegForm.cgi?ms=a98f707e88d7bac6fc0cdf6be6c6e4bc&NO_TOKEN=1&EventID=12";
 
-export const BROCHURE_LINK = "";
+export const BROCHURE_LINK = "https://exhibitions.aeas.com.au/wp-content/uploads/2024/07/2024-Cambodia-Exhibition-Event-Info-A4-Brochure-Soon.jpg";
 
 export const EXHIBITION_DAY = {
   date: {
