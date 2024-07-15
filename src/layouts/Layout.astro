@@ -15,7 +15,10 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL("/aeas.png", Astro.site).toString();
+const resolvedImageWithDomain = new URL(
+  "/aeas/aeas.png",
+  Astro.site,
+).toString();
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
